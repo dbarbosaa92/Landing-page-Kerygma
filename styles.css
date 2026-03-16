@@ -1,8 +1,8 @@
  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg-dark: #0f1e1a;
-      --bg-section: #111f1b;
+      --bg-dark: #2b3758;
+      --bg-section: #283e4f;
       --gold: #c9a84c;
       --gold-light: #e2c07a;
       --white: #f5f0e8;
@@ -151,9 +151,9 @@
       inset: 0;
       background: linear-gradient(
         180deg,
-        #2a3f35 0%,
-        #1a2e24 40%,
-        #0f1e1a 100%
+        #374155 0%,
+        #2d2d51 40%,
+        #223d5c 100%
       );
       /* Replace with: background-image: url('YOUR_HERO_IMAGE.jpg'); background-size: cover; background-position: center; */
     }
@@ -321,7 +321,7 @@
     .article-photo {
       width: 100%;
       aspect-ratio: 4 / 5;
-      background: linear-gradient(135deg, #1a2e24 0%, #243d30 100%);
+      background: linear-gradient(135deg, #1a1f2e 0%, #242e3d 100%);
       position: relative;
       overflow: hidden;
       /* Replace background with: background-image: url('YOUR_IMAGE.jpg'); background-size: cover; background-position: center; */

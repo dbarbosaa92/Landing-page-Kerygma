@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações Acadêmicas — Seminário Kerygma</title>
+    <link rel="stylesheet" href="css/global.css"/>
+    <link rel="icon" href="/favicon/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+
+</head>
+<body>
+
+  <!-- NAVBAR (injetado via JS, igual às outras páginas) -->
+
+  <main class="academico-page">
+
+    <!-- ══════════════════════════════════════
+         SEÇÃO 1 — TÍTULO DA PÁGINA
+    ══════════════════════════════════════ -->
+    <section class="section-hero-academico">
+      <div class="container">
+        <span class="section-label">Formação Ministerial</span>
+        <h1 class="section-title">Informações Acadêmicas</h1>
+        <p class="section-subtitle">Tudo o que você precisa saber para começar sua jornada no Seminário Kerygma.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SEÇÃO 2 — HORÁRIOS E VALORES 
+    ══════════════════════════════════════ -->
+    <section class="section-horarios-valores" id="horarios">
+  <div class="container">
+
+    <div class="horarios-valores-grid">
+
+      <!-- LADO ESQUERDO — Horários -->
+      <div class="hv-col">
+        <div class="section-header" style="text-align:left;">
+          <span class="section-label">Horários</span>
+          <h2 class="section-title">Quando as aulas acontecem</h2>
+        </div>
+
+        <div class="horarios-stack">
+
+          <div class="horario-card">
+            <div class="horario-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="horario-info">
+              <h3 class="horario-tipo">Aulas Presenciais</h3>
+              <p class="horario-dias">Segunda-feira e Quarta-feira</p>
+              <p class="horario-hora">19h20 às 22h00</p>
+              <p class="horario-local">Av. Santa Leopoldina, nº 80 — Vila Velha, Itapuã</p>
+            </div>
+          </div>
+
+          <div class="horario-card">
+            <div class="horario-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <div class="horario-info">
+              <h3 class="horario-tipo">Aulas Remotas</h3>
+              <p class="horario-dias">Toda Quinta-feira</p>
+              <p class="horario-hora">4 novas aulas por semana</p>
+              <p class="horario-local">Disponíveis na Sala Virtual</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DIVISOR VERTICAL -->
+      <div class="hv-divider"></div>
+
+      <!-- LADO DIREITO — Valores -->
+      <div class="hv-col">
+        <div class="section-header" style="text-align:left;">
+          <span class="section-label">Investimento</span>
+          <h2 class="section-title">Valores e promoções</h2>
+        </div>
+
+        <div class="valores-stack">
+
+          <div class="valor-card valor-card--principal">
+            <span class="valor-label">Mensalidade</span>
+            <p class="valor-preco">R$ 199<span class="valor-centavos">,99</span></p>
+            <p class="valor-periodo">por mês</p>
+          </div>
+
+          <div class="valor-card valor-card--promo">
+            <span class="valor-badge">Promoção</span>
+            <h3 class="valor-promo-titulo">Indique e ganhe desconto</h3>
+            <p class="valor-promo-desc">
+              Convide uma pessoa ao seminário e ganhe <strong>15% de desconto</strong> na sua mensalidade.
+              Promoção acumulativa — válida para até <strong>4 convidados</strong>.
+            </p>
+            <div class="valor-promo-escala">
+              <div class="escala-item">
+                <span class="escala-num">1</span>
+                <span class="escala-txt">convidado</span>
+                <span class="escala-desc">15% off</span>
+              </div>
+              <div class="escala-item">
+                <span class="escala-num">2</span>
+                <span class="escala-txt">convidados</span>
+                <span class="escala-desc">30% off</span>
+              </div>
+              <div class="escala-item">
+                <span class="escala-num">3</span>
+                <span class="escala-txt">convidados</span>
+                <span class="escala-desc">45% off</span>
+              </div>
+              <div class="escala-item">
+                <span class="escala-num">4</span>
+                <span class="escala-txt">convidados</span>
+                <span class="escala-desc">60% off</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- ══════════════════════════════════════
+         SEÇÃO 3 — LOCALIZAÇÃO
+    ══════════════════════════════════════ -->
+    <section class="section-localizacao" id="localizacao">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Onde estamos</span>
+          <h2 class="section-title">Localização</h2>
+        </div>
+
+        <div class="localizacao-wrapper">
+          <div class="localizacao-info">
+            <p class="localizacao-endereco">Av. Santa Leopoldina, nº 80</p>
+            <p class="localizacao-cidade">Vila Velha, Itapuã — ES</p>
+            <a
+              class="localizacao-link"
+              href="https://www.google.com/maps/search/Av.+Santa+Leopoldina,+80,+Vila+Velha,+ES"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver no Google Maps
+            </a>
+          </div>
+
+          <div class="localizacao-mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1870.341728242932!2d-40.29504630488853!3d-20.354691472408355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb8160e8d8f32ff%3A0x7cd3f2fc574b1289!2sAv.%20Santa%20Leopoldina%2C%2080%20-%20Itapu%C3%A3%2C%20Vila%20Velha%20-%20ES%2C%2029101-649!5e0!3m2!1spt-BR!2sbr!4v1774034343279!5m2!1spt-BR!2sbr" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SEÇÃO 4 — MATÉRIAS
+    ══════════════════════════════════════ -->
+    <section class="section-materias" id="materias">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-label">Grade curricular</span>
+      <h2 class="section-title">Algumas de nossas matérias</h2>
+    </div>
+
+    <ul class="materias-grid">
+      <li class="materia-item">Pentateuco</li>
+      <li class="materia-item">História da Bíblia</li>
+      <li class="materia-item">História da Igreja</li>
+      <li class="materia-item">Batalha Espiritual</li>
+      <li class="materia-item">Cura Interior</li>
+      <li class="materia-item">Evangelismo</li>
+      <li class="materia-item">Paternidade de Deus</li>
+      <li class="materia-item">Vida de Louvor</li>
+      <li class="materia-item">Jesus no Tabernáculo</li>
+      <li class="materia-item">Cosmovisão</li>
+      <li class="materia-item">Caráter e Integridade</li>
+      <li class="materia-item">Atributos de Deus</li>
+      <li class="materia-item">Edificando Discípulos</li>
+      <li class="materia-item">Escatologia</li>
+      <li class="materia-item">Frutos do Espírito</li>
+      <li class="materia-item">Justiça de Deus</li>
+      <li class="materia-item">Verdades Fundamentais</li>
+      <li class="materia-item">Autoridade e Submissão</li>
+      <li class="materia-item materias-mais">e muitos outros...</li>
+    </ul>
+
+    <div class="avaliacao-box">
+      <div class="avaliacao-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+          <polyline points="10 9 9 9 8 9"/>
+        </svg>
+      </div>
+      <div class="avaliacao-texto">
+        <h3>Avaliações ao final de cada módulo</h3>
+        <p>Realizamos provas ao término de todos os módulos, garantindo a solidez do aprendizado e preparando cada aluno para o ministério com excelência e responsabilidade.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- ══════════════════════════════════════
+         SEÇÃO 7 — PROFESSORES (CAROUSEL)
+    ══════════════════════════════════════ -->
+    <section class="section-professores" id="professores">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Corpo docente</span>
+          <h2 class="section-title">Conheça alguns de nossos professores</h2>
+        </div>
+
+        <div class="carousel-wrapper">
+
+          <!-- Botão anterior -->
+          <button class="carousel-btn carousel-btn--prev" id="carousel-prev" aria-label="Anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+
+          <!-- Track do carousel -->
+          <div class="carousel-track-outer">
+            <div class="carousel-track" id="carousel-track">
+
+              <!-- Professor 1 -->
+              <div class="professor-card">
+                <div class="professor-foto">
+                  <img src="https://scontent.fvix3-1.fna.fbcdn.net/v/t39.30808-6/489328390_1214168190711302_5815741414028653834_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=hWCAClrnQz0Q7kNvwHbE_XV&_nc_oc=AdrLrdcpufRPchnmS2i7xxsJccDzznBvoqpvvJxuejytwV-n5a9bHenP7y_HRcGcsc0&_nc_zt=23&_nc_ht=scontent.fvix3-1.fna&_nc_gid=KwdXadtdP_ZqCOSZL-oqrQ&_nc_ss=7a30f&oh=00_AfwWO6-sLCyzK-7JGb1ccF1r_mTX9V_gJnxY2C-7YUFURg&oe=69C39BEF" alt="Foto do professor 1" class="professor-img" loading="lazy"/>
+                  <div class="professor-foto-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  </div>
+                </div>
+                <p class="professor-nome">Stéfano Moraes</p>
+                <!-- <p class="professor-disciplina">Disciplina</p> -->
+              </div>
+
+              <!-- Professor 2 -->
+              <div class="professor-card">
+                <div class="professor-foto">
+                  <img src="" alt="Foto do professor 2" class="professor-img" loading="lazy"/>
+                  <div class="professor-foto-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  </div>
+                </div>
+                <p class="professor-nome">Nome do Professor</p>
+                <p class="professor-disciplina">Disciplina</p>
+              </div>
+
+              <!-- Professor 3 -->
+              <div class="professor-card">
+                <div class="professor-foto">
+                  <img src="" alt="Foto do professor 3" class="professor-img" loading="lazy"/>
+                  <div class="professor-foto-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  </div>
+                </div>
+                <p class="professor-nome">Nome do Professor</p>
+                <p class="professor-disciplina">Disciplina</p>
+              </div>
+
+              <!-- Professor 4 -->
+              <div class="professor-card">
+                <div class="professor-foto">
+                  <img src="" alt="Foto do professor 4" class="professor-img" loading="lazy"/>
+                  <div class="professor-foto-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  </div>
+                </div>
+                <p class="professor-nome">Nome do Professor</p>
+                <p class="professor-disciplina">Disciplina</p>
+              </div>
+
+              <!-- Professor 5 -->
+              <div class="professor-card">
+                <div class="professor-foto">
+                  <img src="" alt="Foto do professor 5" class="professor-img" loading="lazy"/>
+                  <div class="professor-foto-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  </div>
+                </div>
+                <p class="professor-nome">Nome do Professor</p>
+                <p class="professor-disciplina">Disciplina</p>
+              </div>
+
+              <!-- Professor 6 -->
+              <div class="professor-card">
+                <div class="professor-foto">
+                  <img src="" alt="Foto do professor 6" class="professor-img" loading="lazy"/>
+                  <div class="professor-foto-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  </div>
+                </div>
+                <p class="professor-nome">Nome do Professor</p>
+                <p class="professor-disciplina">Disciplina</p>
+              </div>
+
+              <!-- Professor 7 -->
+              <div class="professor-card">
+                <div class="professor-foto">
+                  <img src="" alt="Foto do professor 7" class="professor-img" loading="lazy"/>
+                  <div class="professor-foto-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  </div>
+                </div>
+                <p class="professor-nome">Nome do Professor</p>
+                <p class="professor-disciplina">Disciplina</p>
+              </div>
+
+              <!-- Professor 8 -->
+              <div class="professor-card">
+                <div class="professor-foto">
+                  <img src="" alt="Foto do professor 8" class="professor-img" loading="lazy"/>
+                  <div class="professor-foto-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  </div>
+                </div>
+                <p class="professor-nome">Nome do Professor</p>
+                <p class="professor-disciplina">Disciplina</p>
+              </div>
+
+              <!-- Professor 9 -->
+              <div class="professor-card">
+                <div class="professor-foto">
+                  <img src="" alt="Foto do professor 9" class="professor-img" loading="lazy"/>
+                  <div class="professor-foto-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  </div>
+                </div>
+                <p class="professor-nome">Nome do Professor</p>
+                <p class="professor-disciplina">Disciplina</p>
+              </div>
+
+            </div><!-- /carousel-track -->
+          </div><!-- /carousel-track-outer -->
+
+          <!-- Botão próximo -->
+          <button class="carousel-btn carousel-btn--next" id="carousel-next" aria-label="Próximo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+
+        </div><!-- /carousel-wrapper -->
+
+        <!-- Dots de navegação -->
+        <div class="carousel-dots" id="carousel-dots"></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (injetado via JS, igual às outras páginas) -->
+
+  <!-- JS do carousel -->
+  <script>
+    (function () {
+  const track     = document.getElementById('carousel-track');
+  const btnPrev   = document.getElementById('carousel-prev');
+  const btnNext   = document.getElementById('carousel-next');
+  const dotsEl    = document.getElementById('carousel-dots');
+
+  const cards     = Array.from(track.querySelectorAll('.professor-card'));
+  const visible   = 3;
+  const total     = cards.length;
+  const pages     = Math.ceil(total / visible);
+  let current     = 0;
+  let autoTimer   = null; // <-- novo
+
+  for (let i = 0; i < pages; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot' + (i === 0 ? ' carousel-dot--active' : '');
+    dot.setAttribute('aria-label', 'Página ' + (i + 1));
+    dot.addEventListener('click', () => { goTo(i); resetAuto(); }); // <-- resetAuto
+    dotsEl.appendChild(dot);
+  }
+
+  function goTo(page) {
+    current = page;
+    const offset = current * (100 / visible) * visible;
+    track.style.transform = `translateX(-${offset}%)`;
+
+    dotsEl.querySelectorAll('.carousel-dot').forEach((d, i) => {
+      d.classList.toggle('carousel-dot--active', i === current);
+    });
+
+    btnPrev.disabled = current === 0;
+    btnNext.disabled = current === pages - 1;
+  }
+
+  // ── Avanço automático ──────────────────────────
+  function startAuto() {
+    autoTimer = setInterval(() => {
+      const next = current < pages - 1 ? current + 1 : 0; // volta ao início
+      goTo(next);
+    }, 4000); // troque 4000 pelo intervalo em ms que preferir
+  }
+
+  function resetAuto() {
+    clearInterval(autoTimer);
+    startAuto();
+  }
+  // ───────────────────────────────────────────────
+
+  btnPrev.addEventListener('click', () => { if (current > 0) goTo(current - 1); resetAuto(); });
+  btnNext.addEventListener('click', () => { if (current < pages - 1) goTo(current + 1); resetAuto(); });
+
+  // Swipe mobile
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      diff > 0
+        ? (current < pages - 1 && goTo(current + 1))
+        : (current > 0 && goTo(current - 1));
+      resetAuto();
+    }
+  });
+
+  goTo(0);
+  startAuto(); // <-- inicia o avanço automático
+})();
+  </script>
+
+    <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+</body>
+</html>

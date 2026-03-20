@@ -1,0 +1,29 @@
+#NAVBAR
+transformar os links da navbar em botoes e adicionar a logo do kerygma
+
+#HOME
+botao de quer descobrir mais bem no inicio da tela
+
+mais enfase na fase dos melhores anos da sua vida
+
+especificar os servicos que oferecemos logo no inicio:
+valor, horarios e datas, presencial e online, materias que temos, requisitos para participar
+
+#ABOUT
+Adicionar seçao de testemunhos com parte escrita e videos de alunos (ja temos os videos no instagram)
+
+#GRADE
+finalizar a parte com nossas materias e alguns de nossos professores: 
+Fabi, estefano, priscila, thiagovinicius, simon e etc
+
+#/formulario
+fazer um formulario para contato
+
+#FOOTER
+botao do rodapé para entrar em contato funcional
+
+#RESUMO CLAUDE
+A maior oportunidade do site é a conversão: alguém chega animado pela proposta, 
+mas não encontra resposta para "quanto custa?", "quando começa?" e "como me inscrevo?". 
+Resolver isso, junto com os links quebrados e o botão de WhatsApp, já transformaria bastante 
+a efetividade da página.

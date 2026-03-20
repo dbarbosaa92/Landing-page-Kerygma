@@ -24,7 +24,88 @@
     }
 
     /* ─── NAV ─── */
-    nav {
+.navbar {
+  background: #0d1b2e;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(195,160,80,0.25);
+}
+.nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+  text-decoration: none;
+}
+.nav-brand-logo {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  max-width: 32px;
+  max-height: 32px;
+  object-fit: contain;
+  display: block;
+  flex: 0 0 32px;
+}
+.nav-logo {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  /* font-family: 'Cormorant Garamond', serif; */
+  /* font-size: 18px; */
+  font-weight: 600;
+  color: #f0e6c8;
+  line-height: 1;
+  white-space: nowrap;
+  /* letter-spacing: 0.05em; */
+}
+.nav-links { display: flex; gap: 4px; align-items: center; }
+.nav-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #c8d8ec;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 15px;
+  position: relative;
+  transition: color 0.2s;
+}
+.nav-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 15px; right: 15px;
+  height: 1px;
+  background: #c3a050;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  transform-origin: left;
+}
+.nav-btn:hover { color: #ffffff; }
+.nav-btn:hover::after { transform: scaleX(1); }
+.nav-cta {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #0d1b2e;
+  background: #c3a050;
+  border: none;
+  cursor: pointer;
+  padding: 7px 20px;
+  border-radius: 6px;
+  margin-left: 8px;
+  transition: background 0.2s;
+}
+
+.nav-cta:hover { background: #d4b464; }
+
+
+
+    /* nav {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
@@ -72,7 +153,7 @@
       transition: opacity 0.2s;
     }
     .nav-account:hover { opacity: 1; }
-    .nav-account svg { width: 18px; height: 18px; }
+    .nav-account svg { width: 18px; height: 18px; } */
 
     /* ─── SIDEBAR SOCIAL ─── */
     .sidebar-social {
@@ -450,3 +531,7 @@
       .footer-grid { grid-template-columns: 1fr; gap: 36px; }
       .container { padding: 0 24px; }
     }
+
+  
+
+

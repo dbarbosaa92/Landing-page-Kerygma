@@ -4,25 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Seminário Kerygma</title>
-  <link rel="stylesheet" href="/styles.css">
+ <link rel="stylesheet" href="css/global.css"/>
   <link rel="icon" href="/favicon/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
   <!-- ─── NAV ─── -->
-  <nav>
+  <!-- <nav>
     <a href="/" class="nav-logo">SEMINÁRIO KERYGMA</a>
     <ul class="nav-links">
       <li><a href="#">Sala virtual</a></li>
       <li><a href="/about.html">Sobre nós</a></li>
       <li><a href="#">Informações acadêmicas</a></li>
     </ul>
-    <!-- <a href="#" class="nav-account">
+ <a href="#" class="nav-account">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
       Account
-    </a> -->
-  </nav>
+    </a> 
+  </nav> -->
+
+  <!-- <nav class="navbar">
+  <span class="nav-logo">Seminário Kerygma</span>
+  <div class="nav-links">
+    <button class="nav-btn" onclick="location.href='#'">Sala virtual</button>
+    <button class="nav-btn" onclick="location.href='about.html'">Sobre nós</button>
+    <button class="nav-btn" onclick="location.href='#'">Informações acadêmicas</button>
+    <button class="nav-cta" onclick="location.href='#'">Inscreva-se</button>
+  </div>
+</nav> -->
+
+
 
   <!-- ─── SIDEBAR SOCIAL ─── -->
   <div class="sidebar-social">
@@ -58,12 +71,16 @@
         <!-- <span>Invista no seu aprendizado</span> -->
       </div>
       <h1>Se prepare para os 2 melhores anos da sua vida!</h1>
-      <a href="#section-01" class="scroll-cta">
+      <a class="btn-hero-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdAdX3VuGcrBxXHM0jCIpmPYnFUMpMfN62yVlbNe9Y6Ln5Z_Q/viewform?usp=header">
+        Quero me inscrever
+      </a>
+      <!-- <a href="#section-01" class="scroll-cta">
         rolar para baixo
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-      </a>
+      </a> -->
     </div>
   </section>
+
 
   <!-- ─── SECTION 01 ─── -->
   <section class="section" id="section-01">
@@ -75,10 +92,17 @@
             <div class="eyebrow-line"></div>
             <span>Deus tem um propósito para a sua vida!</span>
           </div>
-          <h2>Faça Parte da Nossa Comunidade</h2>
+          <h2>Faça Parte do Seminário Kerygma</h2>
           <p>
             Atender a um chamado é o primeiro passo, mas preparar-se para ele é o que define a longevidade do seu ministério. Aqui, você não encontrará apenas um curso, mas uma comunidade de fé dedicada a caminhar ao seu lado. Convidamos você a unir sua vocação à nossa experiência, fazendo parte de uma nova geração de pensadores e líderes que escolheram não aceitar o raso. Venha construir conosco um alicerce que sustentará toda a sua jornada cristã.
           </p>
+          <a class="btn-saiba-mais" href="informaçoes.html">
+            Saiba mais
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
           <!-- <a href="#" class="read-more">
             read more
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -118,6 +142,13 @@
           <p>
             Mergulhar nas Escrituras é mais do que um exercício intelectual; é o oxigênio de uma vida com propósito. Em um mundo cercado de incertezas e interpretações passageiras, o estudo profundo da Teologia oferece a bússola necessária para navegar com fidelidade. Entender as raízes da nossa fé e a profundidade da revelação divina é o que nos permite anunciar a verdade com clareza, autoridade e, acima de tudo, amor.
           </p>
+          <a class="btn-saiba-mais" href="informaçoes.html">
+            Saiba mais
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
           <!-- <a href="#" class="read-more">
             read more
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -143,6 +174,13 @@
           <p>
             Acreditamos que a excelência no serviço a Deus exige uma disciplina inabalável no estudo. Nosso compromisso é com a sã doutrina e com o rigor acadêmico que a Palavra de Deus merece. Aqui, o aluno é desafiado a superar seus limites intelectuais, compreendendo que o esforço na biblioteca é o que garante a segurança no púlpito e a eficácia no aconselhamento. Preparamos obreiros aprovados, que manejam bem a palavra da verdade porque não fugiram do peso da responsabilidade de estudar.
           </p>
+          <a class="btn-saiba-mais" href="informaçoes.html">
+            Saiba mais
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
           <!-- <a href="#" class="read-more">
             read more
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -160,35 +198,7 @@
   </section>
 
   <!-- ─── FOOTER ─── -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#" class="nav-logo">SEMINÁRIO KERYGMA</a>
-          <p>Av. Santa Leopoldina, nº 80 - ES, Vila Velha, Itapuã </p>
-        </div>
-
-        <div class="footer-col">
-          <h4>Veja mais nas redes sociais</h4>
-          <ul>
-            <li><a href="https://www.instagram.com/seminariokerygma/">Instagram</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Entre em contato conosco:</h4>
-          <ul>
-            <li><a href="#">Fabiane - (27) 99792-7725</a></li>
-            <li><a href="#">Davi - (21) 99245-7885</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>Copyright 2026 SEMINÁRIO KERYGMA MINISTERIAL, Inc. &nbsp;·&nbsp; Terms &amp; Privacy</p>
-      </div>
-    </div>
-  </footer>
+  
 
   <!-- ─── SCROLL REVEAL ─── -->
   <script>
@@ -203,6 +213,16 @@
     }, { threshold: 0.15 });
     reveals.forEach(el => observer.observe(el));
   </script>
+
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
+
+  <!-- whatsapp button -->
+  <a class="btn-whatsapp" href="https://wa.me/5527997927725" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
 
 </body>
 </html>

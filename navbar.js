@@ -7,7 +7,7 @@ const navbarTemplate = `
   <div class="nav-links">
     <button class="nav-btn" onclick="location.href='#'">Sala virtual</button>
     <button class="nav-btn" onclick="location.href='about.html'">Sobre nós</button>
-    <button class="nav-btn" onclick="location.href='informaçoes.html'">Informações acadêmicas</button>
+    <button class="nav-btn" onclick="location.href='info.html'">Informações acadêmicas</button>
     <button class="nav-cta" onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSdAdX3VuGcrBxXHM0jCIpmPYnFUMpMfN62yVlbNe9Y6Ln5Z_Q/viewform?usp=header'">Inscreva-se</button>
   </div>
 </nav>

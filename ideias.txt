@@ -1,5 +1,5 @@
 #NAVBAR
-transformar os links da navbar em botoes e adicionar a logo do kerygma
+transformar os links da navbar em botoes e adicionar a logo do kerygma 👍
 
 #HOME
 botao de quer descobrir mais bem no inicio da tela

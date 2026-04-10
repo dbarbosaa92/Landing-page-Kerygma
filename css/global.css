@@ -1363,3 +1363,303 @@ footer {
 @media (max-width: 640px) {
   .btn-whatsapp { bottom: 1.25rem; right: 1.25rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   INSCRIÇÃO
+═══════════════════════════════════════════════════════════════ */
+.inscription-page {
+  min-height: 100vh;
+}
+
+.inscription-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 0 3rem;
+  background:
+    radial-gradient(circle at top, rgba(195, 160, 80, 0.14), transparent 40%),
+    linear-gradient(180deg, rgba(17, 44, 66, 0.7) 0%, rgba(29, 39, 70, 0) 100%);
+}
+
+.inscription-hero-highlights {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.inscription-highlight-card,
+.inscription-panel {
+  background: linear-gradient(180deg, rgba(19, 42, 77, 0.96) 0%, rgba(17, 44, 66, 0.96) 100%);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(3, 10, 20, 0.22);
+}
+
+.inscription-highlight-card {
+  padding: 1.2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.inscription-highlight-label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.inscription-highlight-card strong {
+  font-family: var(--font-academico);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--creme);
+}
+
+.inscription-section {
+  padding: 3rem 0 5rem;
+}
+
+.inscription-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.inscription-panel {
+  padding: 2rem;
+}
+
+.inscription-panel--info {
+  position: sticky;
+  top: 96px;
+}
+
+.inscription-copy {
+  margin-top: 1rem;
+  color: var(--azul-claro);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.inscription-steps {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inscription-step {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--borda);
+}
+
+.inscription-step-number {
+  width: 54px;
+  height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--gold-faint);
+  color: var(--gold);
+  font-family: var(--font-academico);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.inscription-step h3 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-academico);
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--creme);
+}
+
+.inscription-step p {
+  margin: 0;
+  color: var(--texto-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-top: 1.75rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.input-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--creme);
+  letter-spacing: 0.03em;
+}
+
+.input-group input {
+  width: 100%;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  background: rgba(10, 22, 38, 0.55);
+  color: var(--white);
+  font-family: var(--font-ui);
+  font-size: 15px;
+  padding: 0.95rem 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.input-group input::placeholder {
+  color: rgba(200, 216, 236, 0.45);
+}
+
+.input-group input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(195, 160, 80, 0.12);
+  background: rgba(10, 22, 38, 0.72);
+}
+
+.payment-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 1.25rem;
+  margin-top: 0.4rem;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  background: rgba(195, 160, 80, 0.08);
+}
+
+.payment-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+}
+
+.payment-caption {
+  margin: 0.35rem 0 0;
+  font-size: 13px;
+  color: var(--azul-claro);
+}
+
+.price {
+  font-family: var(--font-academico);
+  font-size: clamp(32px, 5vw, 40px);
+  font-weight: 600;
+  color: var(--creme);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.registration-submit {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 1rem 1.4rem;
+  border: none;
+  border-radius: 12px;
+  background: var(--gold);
+  color: #0d1b2e;
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, opacity 0.2s;
+}
+
+.registration-submit:hover {
+  background: var(--gold-hover);
+}
+
+.registration-submit:active {
+  transform: scale(0.985);
+}
+
+.registration-submit:disabled {
+  opacity: 0.72;
+  cursor: wait;
+}
+
+.inscription-disclaimer {
+  font-size: 12px;
+  color: var(--texto-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.message-area {
+  display: none;
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  border: 1px solid transparent;
+}
+
+.message-area.is-visible {
+  display: block;
+}
+
+.message-area.is-error {
+  background: rgba(154, 42, 42, 0.16);
+  border-color: rgba(255, 109, 109, 0.25);
+  color: #ffb2b2;
+}
+
+.message-area.is-visible:not(.is-error) {
+  background: rgba(43, 122, 74, 0.16);
+  border-color: rgba(112, 211, 155, 0.24);
+  color: #bff3d6;
+}
+
+@media (max-width: 900px) {
+  .inscription-hero-highlights,
+  .inscription-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inscription-panel--info {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .inscription-hero {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .inscription-section {
+    padding: 2rem 0 3rem;
+  }
+
+  .inscription-panel {
+    padding: 1.4rem;
+    border-radius: 14px;
+  }
+
+  .inscription-step {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-details {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

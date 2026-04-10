@@ -1,7 +1,11 @@
 (function () {
   const currentPath = window.location.pathname.replace(/\\/g, "/").toLowerCase();
   const basePath =
-    currentPath.includes("/about/") || currentPath.includes("/info/") ? "../" : "./";
+    currentPath.includes("/about/") ||
+    currentPath.includes("/info/") ||
+    currentPath.includes("/inscript/")
+      ? "../"
+      : "./";
 
   const footerTemplate = `
       <div class="container">

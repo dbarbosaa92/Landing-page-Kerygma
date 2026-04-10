@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - Seminário Kerygma</title>
+    <link rel="stylesheet" href="../css/global.css"/>
+    <link rel="icon" href="../favicon/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <main class="academico-page inscription-page">
+        <section class="section-hero-academico inscription-hero">
+            <div class="container">
+                <span class="section-label">Inscrições abertas</span>
+                <h1 class="section-title">Inscrição para o Seminário 2026</h1>
+                <p class="section-subtitle">
+                    Preencha seus dados para gerar o link da matrícula e seguir direto para o pagamento pela InfinitePay.
+                </p>
+
+                <div class="inscription-hero-highlights">
+                    <div class="inscription-highlight-card">
+                        <span class="inscription-highlight-label">Valor da matrícula</span>
+                        <strong>R$ 199,99</strong>
+                    </div>
+                    <div class="inscription-highlight-card">
+                        <span class="inscription-highlight-label">Próximo passo</span>
+                        <strong>Checkout via InfinitePay</strong>
+                    </div>
+                    <div class="inscription-highlight-card">
+                        <span class="inscription-highlight-label">Atendimento</span>
+                        <strong>Suporte para concluir sua matrícula</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="inscription-section">
+            <div class="container">
+                <div class="inscription-grid">
+                    <aside class="inscription-panel inscription-panel--info">
+                        <span class="section-label">Como funciona</span>
+                        <h2 class="section-title">Sua inscrição em poucos minutos</h2>
+                        <p class="inscription-copy">
+                            Esta etapa coleta seus dados, gera o link da matrícula no backend e envia você direto
+                            para a InfinitePay para concluir o pagamento.
+                        </p>
+
+                        <div class="inscription-steps">
+                            <div class="inscription-step">
+                                <span class="inscription-step-number">01</span>
+                                <div>
+                                    <h3>Preencha seus dados</h3>
+                                    <p>Informe seu nome completo e e-mail para identificar sua matrícula.</p>
+                                </div>
+                            </div>
+
+                            <div class="inscription-step">
+                                <span class="inscription-step-number">02</span>
+                                <div>
+                                    <h3>Link gerado no backend</h3>
+                                    <p>Ao clicar no botão, o servidor cria o checkout com os dados da matrícula.</p>
+                                </div>
+                            </div>
+
+                            <div class="inscription-step">
+                                <span class="inscription-step-number">03</span>
+                                <div>
+                                    <h3>Conclua o pagamento</h3>
+                                    <p>Após a confirmação, você retorna ao fluxo com a matrícula encaminhada.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <section class="inscription-panel inscription-panel--form">
+                        <div class="form-header">
+                            <span class="section-label">Cadastro inicial</span>
+                            <h2 class="section-title">Confirme seus dados</h2>
+                            <p class="inscription-copy">
+                                Use um e-mail válido para receber as próximas instruções.
+                            </p>
+                        </div>
+
+                        <form id="registrationForm" class="registration-form">
+                            <div class="input-group">
+                                <label for="userName">Nome completo</label>
+                                <input type="text" id="userName" placeholder="Ex: João Silva" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="userEmail">E-mail</label>
+                                <input type="email" id="userEmail" placeholder="exemplo@email.com" required>
+                            </div>
+
+                            <div class="payment-details">
+                                <div>
+                                    <span class="payment-label">Total a pagar</span>
+                                    <p class="payment-caption">Matrícula do Seminário Kerygma</p>
+                                </div>
+                                <span class="price">R$ 199,99</span>
+                            </div>
+
+                            <button type="submit" id="btnPay" class="registration-submit">
+                                <span id="btnText">Confirmar e pagar com InfinitePay</span>
+                            </button>
+
+                            <p class="inscription-disclaimer">
+                                Ao continuar, você será redirecionado diretamente para o link de pagamento da InfinitePay.
+                            </p>
+                        </form>
+
+                        <div id="messageArea" class="message-area" role="alert" aria-live="polite"></div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const form = document.getElementById('registrationForm');
+        const btn = document.getElementById('btnPay');
+        const btnText = document.getElementById('btnText');
+        const messageArea = document.getElementById('messageArea');
+        const linkInfinity = 'https://checkout.infinitepay.io/davi-barbosa-gabriel/3oYbFvgOSv'
+
+        function hideMessage() {
+            messageArea.className = 'message-area';
+            messageArea.textContent = '';
+        }
+
+        function showError(message) {
+            messageArea.className = 'message-area is-visible is-error';
+            messageArea.textContent = 'Ops! ' + message;
+        }
+
+        function showSuccess(message) {
+            messageArea.className = 'message-area is-visible';
+            messageArea.textContent = message;
+        }
+
+        function buildSuccessRedirectUrl() {
+            const url = new URL(window.location.href);
+            url.searchParams.set('status', 'sucesso');
+            return url.toString();
+        }
+
+        async function readApiResponse(response) {
+            const contentType = response.headers.get('content-type') || '';
+            const rawText = await response.text();
+
+            if (contentType.includes('application/json')) {
+                try {
+                    return JSON.parse(rawText);
+                } catch (error) {
+                    throw new Error('O servidor retornou JSON inválido.');
+                }
+            }
+
+            const normalizedText = rawText.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+            return {
+                error: normalizedText || 'O servidor retornou uma resposta inválida.'
+            };
+        }
+
+        if (new URLSearchParams(window.location.search).get('status') === 'sucesso') {
+            showSuccess('Pagamento concluido com sucesso. Em breve entraremos em contato com as proximas orientacoes.');
+        }
+
+        form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const nome = document.getElementById('userName').value.trim();
+        const email = document.getElementById('userEmail').value.trim();
+
+        if (!nome || !email) {
+            showError('Preencha nome e e-mail antes de continuar.');
+            return;
+        }
+
+        // 1. Mudança Visual
+        btn.disabled = true;
+        btnText.textContent = 'Redirecionando para o pagamento...';
+        hideMessage();
+
+        // 2. Link de Pagamento (Gere este link no painel da InfinitePay)
+        // Exemplo de como o link costuma ser:
+        const seuLinkInfinitePay = "https://pay.infinitepay.io/davi-barbosa-gabriel/199,99";
+
+        // 3. (Opcional) Salvar os dados para você saber quem iniciou a inscrição
+        console.log(`Inscrição iniciada por: ${nome} (${email})`);
+
+        // 4. Redirecionamento Direto
+        setTimeout(() => {
+            window.location.href = seuLinkInfinitePay;
+        }, 800); // Um pequeno delay apenas para o usuário ver o feedback do botão
+});
+        
+    </script>
+
+    <script src="../navbar.js"></script>
+    <script src="../footer.js"></script>
+</body>
+</html>

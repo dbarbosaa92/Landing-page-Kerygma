@@ -1,7 +1,11 @@
 (function () {
   const currentPath = window.location.pathname.replace(/\\/g, "/").toLowerCase();
   const basePath =
-    currentPath.includes("/about/") || currentPath.includes("/info/") ? "../" : "./";
+    currentPath.includes("/about/") ||
+    currentPath.includes("/info/") ||
+    currentPath.includes("/inscript/")
+      ? "../"
+      : "./";
   const virtualRoomUrl = "http://localhost:3000/";
 
   const navbarTemplate = `
@@ -14,7 +18,7 @@
       <button class="nav-btn" onclick="window.location.href='${virtualRoomUrl}'">Sala virtual</button>
       <button class="nav-btn" onclick="window.location.href='${basePath}about/about.html'">Sobre n&oacute;s</button>
       <button class="nav-btn" onclick="window.location.href='${basePath}info/Info.html'">Informa&ccedil;&otilde;es acad&ecirc;micas</button>
-      <button class="nav-cta" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdAdX3VuGcrBxXHM0jCIpmPYnFUMpMfN62yVlbNe9Y6Ln5Z_Q/viewform?usp=header'">Inscreva-se</button>
+      <button class="nav-cta" onclick="window.location.href='${basePath}inscript/inscript.html'">Inscreva-se</button>
     </div>
   </nav>
   `;

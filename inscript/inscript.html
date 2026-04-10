@@ -12,68 +12,15 @@
 </head>
 <body>
     <main class="academico-page inscription-page">
-        <section class="section-hero-academico inscription-hero">
-            <div class="container">
-                <span class="section-label">Inscrições abertas</span>
-                <h1 class="section-title">Inscrição para o Seminário 2026</h1>
-                <p class="section-subtitle">
-                    Preencha seus dados para gerar o link da matrícula e seguir direto para o pagamento pela InfinitePay.
-                </p>
 
-                <div class="inscription-hero-highlights">
-                    <div class="inscription-highlight-card">
-                        <span class="inscription-highlight-label">Valor da matrícula</span>
-                        <strong>R$ 199,99</strong>
-                    </div>
-                    <div class="inscription-highlight-card">
-                        <span class="inscription-highlight-label">Próximo passo</span>
-                        <strong>Checkout via InfinitePay</strong>
-                    </div>
-                    <div class="inscription-highlight-card">
-                        <span class="inscription-highlight-label">Atendimento</span>
-                        <strong>Suporte para concluir sua matrícula</strong>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- <section class="section-hero-academico inscription-hero">
+            <span class="section-label">Inscrições abertas</span>
+        </section> -->
 
         <section class="inscription-section">
             <div class="container">
                 <div class="inscription-grid">
-                    <aside class="inscription-panel inscription-panel--info">
-                        <span class="section-label">Como funciona</span>
-                        <h2 class="section-title">Sua inscrição em poucos minutos</h2>
-                        <p class="inscription-copy">
-                            Esta etapa coleta seus dados, gera o link da matrícula no backend e envia você direto
-                            para a InfinitePay para concluir o pagamento.
-                        </p>
-
-                        <div class="inscription-steps">
-                            <div class="inscription-step">
-                                <span class="inscription-step-number">01</span>
-                                <div>
-                                    <h3>Preencha seus dados</h3>
-                                    <p>Informe seu nome completo e e-mail para identificar sua matrícula.</p>
-                                </div>
-                            </div>
-
-                            <div class="inscription-step">
-                                <span class="inscription-step-number">02</span>
-                                <div>
-                                    <h3>Link gerado no backend</h3>
-                                    <p>Ao clicar no botão, o servidor cria o checkout com os dados da matrícula.</p>
-                                </div>
-                            </div>
-
-                            <div class="inscription-step">
-                                <span class="inscription-step-number">03</span>
-                                <div>
-                                    <h3>Conclua o pagamento</h3>
-                                    <p>Após a confirmação, você retorna ao fluxo com a matrícula encaminhada.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
+                    
 
                     <section class="inscription-panel inscription-panel--form">
                         <div class="form-header">
@@ -87,12 +34,12 @@
                         <form id="registrationForm" class="registration-form">
                             <div class="input-group">
                                 <label for="userName">Nome completo</label>
-                                <input type="text" id="userName" placeholder="Ex: João Silva" required>
+                                <input  type="text" id="userName" autocomplete="name" placeholder="Ex: João Silva" required>
                             </div>
 
                             <div class="input-group">
                                 <label for="userEmail">E-mail</label>
-                                <input type="email" id="userEmail" placeholder="exemplo@email.com" required>
+                                <input inputmode="email" type="email" id="userEmail" autocomplete="email" placeholder="exemplo@email.com" required>
                             </div>
 
                             <div class="payment-details">
@@ -104,7 +51,7 @@
                             </div>
 
                             <button type="submit" id="btnPay" class="registration-submit">
-                                <span id="btnText">Confirmar e pagar com InfinitePay</span>
+                                <span id="btnText">Confirmar e pagar</span>
                             </button>
 
                             <p class="inscription-disclaimer">
@@ -114,9 +61,74 @@
 
                         <div id="messageArea" class="message-area" role="alert" aria-live="polite"></div>
                     </section>
+
+
+                    <aside class="inscription-panel inscription-panel--info">
+                        <span class="section-label">Como funciona</span>
+                        <h2 class="section-title">Sua inscrição em poucos minutos</h2>
+                        <p class="inscription-copy">
+                            Esta etapa coleta seus dados, gera o link da matrícula e envia você direto
+                            para a InfinitePay para concluir o pagamento.
+                        </p>
+
+                        <div class="inscription-steps">
+                            <div class="inscription-step">
+                                <span class="inscription-step-number">01</span>
+                                <div>
+                                    <h3>Preencha seus dados</h3>
+                                    <p>Informe seu nome completo e e-mail para identificação da sua matrícula.</p>
+                                </div>
+                            </div>
+
+                            <div class="inscription-step">
+                                <span class="inscription-step-number">02</span>
+                                <div>
+                                    <h3>Link para pagamento</h3>
+                                    <p>Ao clicar no botão, voce será enviado para uma pagina do InfinitePay.</p>
+                                </div>
+                            </div>
+
+                            <div class="inscription-step">
+                                <span class="inscription-step-number">03</span>
+                                <div>
+                                    <h3>Conclua o pagamento</h3>
+                                    <p>Após a confirmação, você já é nosso aluno!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+
                 </div>
             </div>
         </section>
+
+
+        <!-- <section class="section-hero-academico inscription-hero">
+            <div class="container">
+                <span class="section-label">Inscrições abertas</span>
+                <h1 class="section-title">Inscrição para o Seminário 2026</h1>
+                <p class="section-subtitle">
+                    Preencha seus dados para gerar o link da matrícula e seguir direto para o pagamento pela InfinitePay.
+                </p>
+
+                 <div class="inscription-hero-highlights">
+                    <div class="inscription-highlight-card">
+                        <span class="inscription-highlight-label">Valor da matrícula</span>
+                        <strong>R$ 199,99</strong>
+                    </div>
+                    <div class="inscription-highlight-card">
+                        <span class="inscription-highlight-label">Próximo passo</span>
+                        <strong>Checkout via InfinitePay</strong>
+                    </div>
+                    <div class="inscription-highlight-card">
+                        <span class="inscription-highlight-label">Atendimento</span>
+                        <strong>Suporte para concluir sua matrícula</strong>
+                    </div>
+                </div> 
+            </div>
+        </section> -->
+
+        
     </main>
 
     <script>
@@ -195,12 +207,19 @@
         // 4. Redirecionamento Direto
         setTimeout(() => {
             window.location.href = seuLinkInfinitePay;
-        }, 800); // Um pequeno delay apenas para o usuário ver o feedback do botão
+        }, 1000); // Um pequeno delay apenas para o usuário ver o feedback do botão
 });
         
     </script>
 
     <script src="../navbar.js"></script>
     <script src="../footer.js"></script>
+
+    <!-- whatsapp button -->
+  <a class="btn-whatsapp" href="https://wa.me/5527997927725" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
 </body>
 </html>

@@ -39,7 +39,7 @@
 
   <!-- ─── SIDEBAR SOCIAL ─── -->
   <div class="sidebar-social">
-    <span class="sidebar-follow">Siga-nos</span>
+    <span class="sidebar-follow"><a href="https://www.instagram.com/seminariokerygma/">Siga-nos</a></span>
     <a href="https://www.instagram.com/seminariokerygma/" aria-label="Instagram">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
     </a>
@@ -71,18 +71,55 @@
         <!-- <span>Invista no seu aprendizado</span> -->
       </div>
       <h1>Se prepare para os 2 melhores anos da sua vida!</h1>
-      <a class="btn-hero-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdAdX3VuGcrBxXHM0jCIpmPYnFUMpMfN62yVlbNe9Y6Ln5Z_Q/viewform?usp=header">
+      <a class="btn-hero-cta" href="./inscript/inscript.html">
         Quero me inscrever
       </a>
       <a class="btn-hero-info" href="./info/Info.html">
         Quero saber mais
       </a>
-      <!-- <a href="#section-01" class="scroll-cta">
-        rolar para baixo
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-      </a> -->
     </div>
   </section>
+
+  <div class="section-divider-gold"></div>
+
+  <!-- ========================================
+     COUNTER UP — Seminário Kerygma
+     ======================================== -->
+ 
+<section class="counters-section">
+  <div class="counters-grid">
+ 
+    <div class="counter-item">
+      <div class="counter-number">
+        <span class="counter-val" data-target="300" data-duration="2000">0</span>
+        <span class="counter-suffix">+</span>
+      </div>
+      <div class="counter-divider"></div>
+      <div class="counter-label">Alunos formados</div>
+    </div>
+ 
+    <div class="counter-item">
+      <div class="counter-number">
+        <span class="counter-val" data-target="11" data-duration="1500">0</span>
+        <span class="counter-suffix"> anos</span>
+      </div>
+      <div class="counter-divider"></div>
+      <div class="counter-label">De experiência</div>
+    </div>
+ 
+    <div class="counter-item">
+      <div class="counter-number">
+        <span class="counter-val" data-target="40" data-duration="1800">0</span>
+        <span class="counter-suffix">+</span>
+      </div>
+      <div class="counter-divider"></div>
+      <div class="counter-label">Matérias no currículo</div>
+    </div>
+ 
+  </div>
+</section>
+
+<div class="section-divider"></div>
 
 
   <!-- ─── SECTION 01 ─── -->
@@ -216,6 +253,41 @@
     }, { threshold: 0.15 });
     reveals.forEach(el => observer.observe(el));
   </script>
+
+  <!-- ========== SCRIPT ========== -->
+<script>
+  /* Curva de desaceleração suave no final */
+  function easeOutExpo(t) {
+    return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+  }
+ 
+  /* Anima um único elemento contador */
+  function animateCounter(el) {
+    const target   = parseInt(el.dataset.target);
+    const duration = parseInt(el.dataset.duration);
+    const start    = performance.now();
+ 
+    function step(now) {
+      const elapsed  = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      el.textContent = Math.round(easeOutExpo(progress) * target);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+ 
+  /* Dispara quando a seção entra na tela (IntersectionObserver) */
+  const Observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        document.querySelectorAll('.counter-val').forEach(animateCounter);
+        Observer.disconnect(); /* roda só uma vez */
+      }
+    });
+  }, { threshold: 0.3 });
+ 
+  Observer.observe(document.querySelector('.counters-section'));
+</script>
 
   <script src="navbar.js"></script>
   <script src="footer.js"></script>
